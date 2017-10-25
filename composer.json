@@ -1,0 +1,36 @@
+{
+  "name": "agi",
+  "description": "AGI Solcitors",
+  "authors"     : [
+    {
+      "name"    : "Michael Foster",
+      "email"   : "mfos@me.com",
+      "homepage": "http://michaelfoster.uk"
+    }
+  ],
+  "repositories":[
+    {
+      "type":"composer",
+      "url":"https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "johnpbloch/wordpress": ">=4.8.2",
+    "wpackagist-plugin/akismet": "*",
+    "wpackagist-plugin/wordpress-seo": "*",
+    "wpackagist-plugin/sf-move-login": "*",
+    "wpackagist-plugin/better-wp-security": ">=6.1.1",
+    "wpackagist-plugin/regenerate-thumbnails": "*"
+  },
+  "config": {
+    "secure-http": true
+  },
+  "extra": {
+    "wordpress-install-dir": "public_html/wp",
+    "installer-paths": {
+      "public_html/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "public_html/app/themes/{$name}/": ["type:wordpress-theme"],
+      "public_html/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"]
+    }
+  }
+}

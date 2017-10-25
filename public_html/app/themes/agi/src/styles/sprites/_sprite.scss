@@ -1,0 +1,24 @@
+%svg-common {
+	background: url("../images/sprite.svg") no-repeat;
+}
+
+.svg-menu-burger {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-menu-burger-dims {
+	width: 33px;
+	height: 21px;
+}
+
+.svg-menu-close {
+	@extend %svg-common;
+	background-position: 0 100%;
+}
+
+.svg-menu-close-dims {
+	width: 25px;
+	height: 25px;
+}
+

@@ -1,0 +1,31 @@
+# -------------------------
+# BEGIN Whitelisted Files
+# -------------------------
+
+# track these files, if they exist
+!.gitignore
+!.editorconfig
+!.eslintrc
+!README.md
+!CHANGELOG.md
+!composer.json
+!composer.lock
+!vendor/autoload.php
+!public/app/themes/agi/
+
+*.DS_Store
+lib
+logs
+node_modules
+vendor
+/config/
+public_html/wp
+public_html/app/plugins/*
+public_html/app/themes/index.php
+# public_html/app/uploads
+!public_html/app/uploads/index.php
+public_html/app/themes/agi/dist
+composer.phar
+
+!public_html/app/cache/index.html
+public_html/app/cache/*

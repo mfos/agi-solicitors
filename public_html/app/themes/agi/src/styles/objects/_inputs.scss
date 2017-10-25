@@ -1,0 +1,25 @@
+::-webkit-input-placeholder {
+    color: $color-text-input;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: $color-text-input;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+    color: $color-text-input;  
+}
+:-ms-input-placeholder {  
+    color: $color-text-input;  
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+
+select {
+    color: $color-text-input;
+}
+
+.o-form {
+	
+}

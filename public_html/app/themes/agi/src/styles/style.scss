@@ -1,0 +1,55 @@
+/*
+Theme Name: AGI Theme
+Theme URI: http://michaelfoster.uk
+Author: Michael Foster
+Author URI: http://michaelfoster.uk
+Description: AGI Solicitors Theme
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: agiwpproject
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+// Libs
+@import "libs/lib";
+
+// Helpers - Mixins and functions
+@import "helpers/helpers";
+
+// Miniboot -  minimal bootstrap based framework V1.1
+@import "miniboot/miniBoot";
+
+// Variables
+@import "variables/colors";
+@import "variables/fonts";
+@import "variables/typography";
+
+// Accessibility
+@import "accessibility/accessibility";
+
+// Vendor styles
+@import "vendor/slick";
+
+// Base - Custom resets etc
+@import "base/base";
+
+// SVG Spriting	
+@import "sprites/sprite";
+
+// Layouts 
+@import "layouts/layouts";
+
+// Objects
+@import "objects/buttons";
+@import "objects/typography";
+@import "objects/cookie";
+@import "objects/inputs";
+
+// Components
+@import "components/form";
+@import "components/nav";
+
+// Utilities
+@import "utilities/utilities";

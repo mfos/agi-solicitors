@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'gt_walsheim_problack';
+    src: url('../../fonts/gtwalsheimproblack-webfont.woff2') format('woff2'),
+         url('../../fonts/gtwalsheimproblack-webfont.woff') format('woff'),
+         url('../../fonts/gtwalsheimproblack-webfont.ttf') format('truetype'),
+         url('../../fonts/gtwalsheimproblack-webfont.svg#gt_walsheim_problack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gt_walsheim_probold';
+    src: url('../../fonts/gtwalsheimprobold-webfont.woff2') format('woff2'),
+         url('../../fonts/gtwalsheimprobold-webfont.woff') format('woff'),
+         url('../../fonts/gtwalsheimprobold-webfont.ttf') format('truetype'),
+         url('../../fonts/gtwalsheimprobold-webfont.svg#gt_walsheim_probold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gt_walsheim_prolight';
+    src: url('../../fonts/gtwalsheimprolight-webfont.woff2') format('woff2'),
+         url('../../fonts/gtwalsheimprolight-webfont.woff') format('woff'),
+         url('../../fonts/gtwalsheimprolight-webfont.ttf') format('truetype'),
+         url('../../fonts/gtwalsheimprolight-webfont.svg#gt_walsheim_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gt_walsheim_proregular';
+    src: url('../../fonts/gtwalsheimproregular-webfont.woff2') format('woff2'),
+         url('../../fonts/gtwalsheimproregular-webfont.woff') format('woff'),
+         url('../../fonts/gtwalsheimproregular-webfont.ttf') format('truetype'),
+         url('../../fonts/gtwalsheimproregular-webfont.svg#gt_walsheim_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font-walsheimlight: "gt_walsheim_prolight";
+$font-walsheimregular: "gt_walsheim_prolight";
+$font-walsheimbold: "gt_walsheim_probold";
+$font-walsheimblack: "gt_walsheim_problack";
