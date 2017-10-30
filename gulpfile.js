@@ -66,7 +66,9 @@ var config = {
 gulp.task('scripts.lib', function() {
     return gulp.src(paths.scripts.src + '/libs/*.js')
         .pipe(plugins.order([
-            '/classie.js'
+            '/classie.js',
+            '/jquery.sticky-kit.min.js',
+            '/slick.min.js'
           ]))
         .pipe(plugins.sourcemaps.init())
         .pipe(plugins.concat('scripts.lib.js'))

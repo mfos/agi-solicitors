@@ -17,7 +17,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-    font-family: $font-headings;
+    font-family: $font-main;
     text-transform: none;
     letter-spacing: 0.01em;
     padding:5px 0 20px 0;
@@ -82,7 +82,7 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted $color-light-blue;
+	border-bottom: 1px dotted $color-dark-blue;
 	cursor: help;
 }
 
@@ -92,8 +92,8 @@ mark, ins {
 }
 
 h1 {
-	@include font-size(3);
-	@include line-height(3.4);	
+	@include font-size(2.8);
+	@include line-height(3.2);	
 }
 h2 {
 	@include font-size(4);

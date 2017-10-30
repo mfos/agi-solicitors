@@ -1,25 +1,23 @@
-.o-btn {
+.o-button {
     @include transition(all .2s ease-in-out);
 
     display: inline-block;
-    padding: 15px 75px 15px 30px;
+    padding: 6px 0 6px 0;
     letter-spacing: 0px;
     position: relative;
     margin: 0;
-    width:auto;
-
-    @include font-size(1.8);
-    @include line-height(2);
-
+    @include font-size(1.6);
+    @include line-height(2.4);
+	max-width: 240px;
     text-decoration: none;
     font-family: $font-main;
-    text-align: left;
-    height:50px;
+    text-align: center;
+    min-height:25px;
     color: $color-dark-blue;
     text-transform: none;
     z-index: 10;
-    border-radius: 25px;
-    background-color:$color-yellow;
+    border-radius: 45px;
+    @include rgba(background-color, white, 0.9, white);
 
     &:after {
         content: '';
@@ -33,7 +31,7 @@
     }
     
     &:focus {
-        color: $color-yellow;
+        color: #ffffff;
     }
 
     &:hover {
@@ -51,5 +49,14 @@
             top: 20px;
         }
     }
-    
+    &__white {
+	    @include rgba(background-color, white, 0.9, white);
+	    &:hover {
+		    background-color: #ffffff;
+	    }
+    }
+    @media (min-width: $screen-sm-min) {
+	 
+	    
+	}
 }

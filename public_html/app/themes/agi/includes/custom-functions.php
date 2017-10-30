@@ -31,6 +31,36 @@ function change_message( $message, $form ) {
     return "<div class='validation_error'>There is an error with your submission. Please complete the forms highlighted below.</div>";
 }
 
+// Custom menu walker class
+class Agi_Walker extends Walker_Nav_Menu {
+    
+	// Displays start of an element. E.g '<li> Item Name'
+    // @see Walker::start_el()
+    function start_el(&$output, $item, $depth=0, $args=array(), $id = 0) {
+    	$object = $item->object;
+    	$type = $item->type;
+    	$title = $item->title;
+    	$permalink = $item->url;
+
+      $output .= "<li class='" .  implode(" ", $item->classes) . "'>";
+        
+      //Add SPAN if no Permalink
+      if( $permalink && $permalink != '#' ) {
+      	$output .= '<a href="' . $permalink . '">';
+      } else {
+      	$output .= '<span class="no-link">';
+      }
+       
+      $output .= $title;
+
+
+      if( $permalink && $permalink != '#' ) {
+      	$output .= '</a>';
+      } else {
+      	$output .= '</span>';
+      }
+    }
+}
 
 /*
 // Insert 'styleselect' into the $buttons array

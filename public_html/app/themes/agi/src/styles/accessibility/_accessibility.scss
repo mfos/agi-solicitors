@@ -28,13 +28,13 @@
 }
 
 a {
-	color: $color-light-blue;
+	color: $color-dark-blue;
 	text-decoration: none; 
 	&:hover,
 	&:focus {
-		color: $color-light-blue;
-		-webkit-text-decoration-color: $color-light-blue;
-		text-decoration-color: $color-light-blue;
+		color: $color-dark-blue;
+		-webkit-text-decoration-color: $color-dark-blue;
+		text-decoration-color: $color-dark-blue;
 	}  
   
   }

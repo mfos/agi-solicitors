@@ -1,0 +1,65 @@
+.c-site-header {
+	padding: 0; 
+	height:90px;
+	background-color: $color-dark-blue;	
+	width:100%;
+	z-index: 9991;
+	
+	&__logo {
+	  width:125px;
+	  height:auto;
+	  display: block;
+	  position: absolute;
+	  z-index: 999;
+	  left: 15px;
+	  top:20px;
+	  
+	  img {
+		width:125px;
+	  }
+	}
+
+
+  @media (min-width: $screen-sm-min) {
+	  
+  	height:94px;
+ 
+ 
+  	position: fixed;
+ 
+	&__logo {
+		width:130px;
+		
+		svg {
+			height:86px;
+			width:130px;
+		}
+	}
+  	
+  }
+
+  @media screen and (min-width: $screen-md-min) {
+  	height:114px;
+  	
+ 
+	&__logo {
+		width:155px;
+		svg {
+			height:103px;
+			width:155px;
+		}
+	}	  	
+  	
+  }
+  
+  @media (min-width: $screen-lg-min) {
+
+  	
+  	&__logo {
+	  	margin-left: 0;
+  	}
+  	
+  }
+  
+  
+}

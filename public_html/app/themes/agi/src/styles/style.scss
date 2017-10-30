@@ -23,7 +23,6 @@ This theme, like WordPress, is licensed under the GPL.
 
 // Variables
 @import "variables/colors";
-@import "variables/fonts";
 @import "variables/typography";
 
 // Accessibility
@@ -46,10 +45,16 @@ This theme, like WordPress, is licensed under the GPL.
 @import "objects/typography";
 @import "objects/cookie";
 @import "objects/inputs";
+@import "objects/slick";
 
 // Components
 @import "components/form";
 @import "components/nav";
+@import "components/site-header";
+@import "components/site-footer";
+@import "components/overlay-menu";
+@import "components/burger-menu";
+@import "components/homepage-banner";
 
 // Utilities
 @import "utilities/utilities";
