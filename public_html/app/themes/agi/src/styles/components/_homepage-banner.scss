@@ -9,11 +9,11 @@
 
 	}
 	&__banner-heading {
-		padding: 15px;
+		padding: 0 15px 15px;
 		h1  {
 			color: #ffffff;
-			@include font-size(2);
-			@include line-height(2.4);
+			@include font-size(1.8);
+			@include line-height(2.2);
 			padding-top: 10px;
 			font-weight: 300;
 		}
@@ -27,21 +27,28 @@
 	}
 	&__slider {
 		overflow: hidden;
+	
 		img {
 			max-width: 100%;
+			width:100%;
 		}
+	}
+	&__banner-bottom-row {
+		position: absolute;
+		bottom:0;
+		width:100%;
 	}
 	&__banner-feature {
 		text-align: center;
-		padding: 20px 0;
+		padding: 10px 0;
 		@include rgba(background-color, blue, 0.9, white);
 		float:left;
 		width:50%;
 		h2 {
 			color: #ffffff;
 			text-transform: uppercase;
-			@include font-size(1.8);
-			@include line-height(2);
+			@include font-size(1.6);
+			@include line-height(1.8);
 			margin-bottom: 0;
 			padding-bottom: 0;
 
@@ -76,31 +83,56 @@
 			z-index: 999;
 			height:42%;
 			@include rgba(background-color,$color-dark-blue, 0.8, white);
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0d3262+0,7692b6+100&1+0,0.33+100 */
+background: -moz-linear-gradient(top, rgba(13,50,98,1) 0%, rgba(118,146,182,0.33) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(13,50,98,1) 0%,rgba(118,146,182,0.33) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(13,50,98,1) 0%,rgba(118,146,182,0.33) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d3262', endColorstr='#547692b6',GradientType=0 ); /* IE6-9 */
+			
+			
 			h1 {
 				@include font-size(2.8);
 				@include line-height(3.4);
 			}
 			.o-button {
-				@include rgba(background-color, white, 0.9, white);
+				@include rgba(background-color, white, 0.8, white);
 				text-decoration: none;
 				color: $color-dark-blue;
 				padding: 8px 0 8px 0;
 				width:220px;
+				&:hover {
+					background-color: #ffffff;
+				}
 				
 			}
 		}
+
 		&__banner-heading {
 			float: left;
 			width:47%;
 			padding: 0;
-			margin-left: 3%;
-			margin-top: 4%;
+			margin-left: 40px;
+			margin-top: 45px;
+		}
+		&__banner-heading-inner {
+			max-width: 750px;
+			margin-left: auto;
+			margin-right: auto;
+			&::after {
+				clear: both;
+			}
+			&::after,
+			&::before {
+				content: " ";
+				display: table;
+			}
+			
+			
 		}
 		&__banner-extra {
 			float: left;
-			width:47%;
-			margin-top: 4%;
-			margin-left: 3%;
+			width:42%;
+			margin-top: 45px;
 			ul {
 				list-style: square;
 				li {
@@ -112,19 +144,23 @@
 		}
 		&__slider {
 			margin-bottom: 0;
-			height:575px;
+			height:500px;
 			clear: both;
 			img {
-				width:148%;
+				width:132%;
 				max-width: inherit;
 			}
 		}
 		&__banner-bottom-row {
-			width:100%;
+			width:750px;
+			margin-left: auto;
+			margin-right: auto;
+			left:0;
+			right:0;
 			clear: both;
 			z-index: 999;
-			position: relative;
-			margin-top: -190px;
+			position: absolute;
+			bottom:42px;
 		}
 		&__banner-feature {
 			text-align: center;
@@ -167,7 +203,33 @@
 	/* Medium devices (tablets, 992px and up) */
 	@media (min-width: $screen-md-min) {
 
-
+		&__banner-top-row {
+			
+			h1 {
+				@include font-size(3.4);
+				@include line-height(4);
+			}
+		}
+		&__banner-heading {
+			margin-top: 80px;
+		}
+		&__banner-heading-inner {
+			max-width: 970px;
+		}
+		&__banner-bottom-row {
+			bottom:75px;
+			width:970px;
+		}
+		&__banner-extra {
+			margin-top:80px;
+			ul {
+				li {
+					@include font-size(2.2);
+					@include line-height(2.4);	
+					margin-bottom: 15px;
+				}
+			}
+		}
 		&__slider {
 			height:550px;
 			img {
@@ -175,9 +237,13 @@
 			}
 		}
 		&__banner-feature {
-	
+			width:21%;
+			margin: 0 2% 20px 2%;;
 			p {
 				display: block;
+				margin-top: 0;
+				@include font-size(1.5);
+				@include line-height(1.7);
 			}
 		}
 		
@@ -189,6 +255,48 @@
 		max-width: 1400px;
 		margin-left: auto;
 		margin-right: auto;
+		
+		&__banner-top-row {
+			top:114px;
+			height:335px;
+			
+			h1 {
+				@include font-size(4.2);
+				@include line-height(4.6);
+				
+			}
+		}
+		&__banner-heading {
+			margin-top: 75px;
+			width:305px;
+		}
+		&__banner-extra {
+			margin-top: 80px;
+			margin-left: 130px;
+			
+			ul {
+				 margin-left: 40px;
+				 li {
+					
+					@include font-size(2.6);
+					@include line-height(2.8); 
+					margin-bottom: 25px;
+				 }
+			}
+		}
+		&__slider {
+			height:680px;
+		}
+		&__banner-bottom-row {
+			max-width: 1170px;
+			margin-left: auto;
+			margin-right: auto;		
+			left:0;
+			right:0;	
+		}
+		&__banner-feature {
+
+		}
 		
 	}
 	

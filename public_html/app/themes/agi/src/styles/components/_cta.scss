@@ -1,0 +1,53 @@
+.c-cta {
+	background-image: url('../images/cta-background-mb.jpg');
+	background-size: cover;
+	width:100%;
+	padding: 20px 0;
+	&__container {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 400px;
+		
+		p {
+			color: #ffffff;
+			@include font-size(1.8);
+			@include line-height(2);
+			margin: 0 15px;
+			padding-bottom: 20px;
+			font-weight: 300;
+		}
+	}
+	
+	/* Small devices (tablets, 768px and up) */
+	@media (min-width: $screen-sm-min) {
+		
+		background-image: url('../images/cta-background.jpg');
+		padding: 40px 0;
+		
+		&__container {
+			max-width: 600px;
+		}
+		
+		p {
+			@include font-size(2.2);
+			@include line-height(2.8);
+			padding-bottom: 30px;
+		}		
+	}	
+	/* Medium devices (tablets, 992px and up) */
+	@media (min-width: $screen-md-min) {
+		
+		
+		padding: 60px 0;
+		&__container {
+			max-width: 800px;
+		}
+		p {
+			@include font-size(3.2);
+			@include line-height(3.8);
+			margin: 0 15px;
+			padding-bottom: 50px;
+		}			
+	}	
+}

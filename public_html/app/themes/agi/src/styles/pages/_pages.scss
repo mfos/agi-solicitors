@@ -1,0 +1,33 @@
+
+// About page
+.page-about-us {
+	.c-page-header {
+		&::before {
+			@include rgba(background-color, $color-green, 0.8, white);
+		}
+	}
+}
+// Funding page
+.page-funding {
+	.c-page-header {
+		&::before {
+			@include rgba(background-color, $color-blue, 0.8, white);
+		}
+	}
+}
+// Services page
+.page-services {
+	.c-page-header {
+		&::before {
+			@include rgba(background-color, $color-red, 0.8, white);
+		}
+	}
+}
+// C0ntact page
+.page-contact {
+	.c-page-header {
+		&::before {
+			@include rgba(background-color, $color-orange, 0.8, white);
+		}
+	}
+}

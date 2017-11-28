@@ -6,7 +6,7 @@
 	z-index: 9991;
 	
 	&__logo {
-	  width:125px;
+	  width:115px;
 	  height:auto;
 	  display: block;
 	  position: absolute;
@@ -15,16 +15,53 @@
 	  top:20px;
 	  
 	  img {
-		width:125px;
+		width:115px;
 	  }
 	}
+	&__telephone {
+	    position: absolute;
+	    right: 130px;
+	    top: 23px;
+	    z-index: 12;
+	  &::before {
+		  @include pseudo;
+		  @extend .svg-telephone-icon;
+		  @extend .svg-telephone-icon-dims;
+		 
+	  }
+	  a {
+		  display: block;
+		  cursor: pointer;
+		  position: relative;
+		  text-indent: -9990px;
+		   z-index: 13;
+	  }
+	}
+	&__twitter {
+	    position: absolute;
+	    right: 102px;
+	    top: 23px;
+	    z-index: 12;	
+		&::before {
+			@include pseudo;
+			@extend .svg-twitter-icon;
+			@extend .svg-twitter-icon-dims;
+		
+		}
+	  a {
+		  display: block;
+		  cursor: pointer;
+		  position: relative;
+		  z-index: 13;
+		  text-indent: -9990px;
+		  @extend .svg-twitter-icon-dims;
+	  }
+	 }
 
 
   @media (min-width: $screen-sm-min) {
 	  
   	height:94px;
- 
- 
   	position: fixed;
  
 	&__logo {
@@ -35,7 +72,25 @@
 			width:130px;
 		}
 	}
-  	
+	&__telephone {
+	    right: 220px;
+	    top: 34px;
+		&::before {
+			left:-40px;
+		}
+	  a {
+		  display: block;
+		  text-indent: 0;
+		   z-index: 13;
+		   color: #ffffff;
+		   @include font-size(2);
+		   @include line-height(2.4);
+	  }
+	}
+	&__twitter {
+	    right: 160px;
+	    top: 34px;
+	 }  	
   }
 
   @media screen and (min-width: $screen-md-min) {
@@ -43,21 +98,26 @@
   	
  
 	&__logo {
-		width:155px;
-		svg {
-			height:103px;
-			width:155px;
+		width:160px;
+		margin-top: 5px;
+		img {
+			height:auto;
+			width:160px;
 		}
-	}	  	
+	}	 
+	&__telephone {
+		top:48px;
+	} 	
+	&__twitter {
+		top:48px;
+	}
   	
   }
   
   @media (min-width: $screen-lg-min) {
 
   	
-  	&__logo {
-	  	margin-left: 0;
-  	}
+
   	
   }
   

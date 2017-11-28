@@ -17,3 +17,16 @@
 .u-font-light {
   
 }
+
+.u-clear {
+	
+	&::before,
+	&::after {
+		content: " ";
+		display: table;
+	}
+	&::after {
+		clear: both;
+	}
+	
+}

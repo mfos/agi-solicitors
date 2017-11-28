@@ -69,6 +69,14 @@
 }
 // @include rgba(background-color, black, 0.5, white);
 
+// Pseudo
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+// @include pseudo
+
 // Transitions
 @mixin transition($args...) {
   -webkit-transition: $args;

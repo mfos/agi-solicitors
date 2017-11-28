@@ -26,6 +26,15 @@ var config = {
     browserSync         = require('browser-sync'),
     del                 = require('del'),
     reload              = browserSync.reload,
+	mergeStream 		= require('merge-stream'),
+
+	jimp				= require('gulp-jimp'),
+	image 				= require('gulp-image'),
+	webp 				= require('gulp-webp'),
+	newer 				= require('gulp-newer'),
+	clone				= require('gulp-clone'),
+	rename 				= require('gulp-rename'),
+
 
     base = './',
     core = 'public_html/wp',
@@ -158,7 +167,7 @@ gulp.task('styles', function() {
 
 
 // Images - Image optimisation
-gulp.task('images', function () {
+gulp.task('oldimages', function () {
     return gulp.src(paths.images.src)
         //.pipe(plugins.changed(paths.images.dest))
         .pipe(plugins.imagemin({
@@ -170,6 +179,58 @@ gulp.task('images', function () {
         .pipe(gulp.dest(paths.images.dest))
         .on('end', function(){ gutil.log(gutil.colors.white.bgMagenta.bold('  Images Optimised')); })
 });
+
+
+gulp.task('images', function() {
+	const dest = paths.images.dest;
+
+	let stream = gulp.src(['./public_html/app/themes/agi/src/images/imgs/*.+(jpg|png)']).pipe(newer(dest));
+
+	let nonRetinaStream = stream.pipe(clone()).pipe(
+		jimp({
+			'': {
+				scale: 0.5
+			}
+		})
+	);
+
+	let retinaStream = stream.pipe(
+		rename({
+			suffix: '_2x'
+		})
+	);
+
+	let allImages = mergeStream(retinaStream, nonRetinaStream);
+
+	let defaultStream = allImages
+		.pipe(clone());
+
+/*
+	if (process.env.NODE_ENV === 'production') {
+		defaultStream = defaultStream.pipe(
+			image({
+				pngquant: false,
+				optipng: true,
+				zopflipng: true,
+				jpegRecompress: false,
+				jpegoptim: false,
+				mozjpeg: false,
+				guetzli: true,
+				gifsicle: false,
+				svgo: false,
+				concurrent: 10
+			})
+		);
+	}
+*/
+
+	let webPStream = allImages.pipe(webp());
+
+	return mergeStream(defaultStream, webPStream).pipe(gulp.dest(dest));
+});
+
+
+
 
 // SVG Sprites
 gulp.task('svg-icon-sprite', function () {

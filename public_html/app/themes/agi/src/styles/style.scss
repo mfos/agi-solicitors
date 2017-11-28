@@ -37,6 +37,9 @@ This theme, like WordPress, is licensed under the GPL.
 // SVG Spriting	
 @import "sprites/sprite";
 
+// pages
+@import "pages/pages";
+
 // Layouts 
 @import "layouts/layouts";
 
@@ -55,6 +58,11 @@ This theme, like WordPress, is licensed under the GPL.
 @import "components/overlay-menu";
 @import "components/burger-menu";
 @import "components/homepage-banner";
+@import "components/cta";
+@import "components/services-grid";
+@import "components/heading";
+@import "components/large-cta";
+@import "components/page-header";
 
 // Utilities
 @import "utilities/utilities";

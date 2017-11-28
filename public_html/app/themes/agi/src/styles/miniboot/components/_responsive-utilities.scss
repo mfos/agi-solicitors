@@ -45,17 +45,17 @@
 }
 
 .visible-xs-block {
-  @media (max-width: $screen-xs-min) {
+  @media (max-width: $screen-xs-max) {
     display: block !important;
   }
 }
 .visible-xs-inline {
-  @media (max-width: $screen-xs-min) {
+  @media (max-width: $screen-xs-max) {
     display: inline !important;
   }
 }
 .visible-xs-inline-block {
-  @media (max-width: $screen-xs-min) {
+  @media (max-width: $screen-xs-max) {
     display: inline-block !important;
   }
 }

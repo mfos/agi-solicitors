@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
     padding:5px 0 20px 0;
     margin: 0;
     font-weight: normal;
-    color: $color-dark-blue;
+    color: $color-text-main;
 }
 
 p {
@@ -96,15 +96,12 @@ h1 {
 	@include line-height(3.2);	
 }
 h2 {
-	@include font-size(4);
-	@include line-height(4.2);
-	text-align: center;
-
+	@include font-size(3);
+	@include line-height(3.2);
 }
 h3 {
     @include font-size(2.2);
 	@include line-height(2.3);
-	text-align: center;
 }
 h4 {
     @include font-size(1.7);
@@ -117,27 +114,8 @@ h4 {
    }
 }
 
-.lead {
-	@include font-size(1.8);
-	@include line-height(3);	
-}
-.lead-large {
-	@include font-size(2);
-	@include line-height(3.2);	
-}
 
-.internal-page {
-    .lead {
-    	@include font-size(2);
-    	@include line-height(3.2);        
-    }
-}
 
-.internal-page {
-    h1, h2, h3, h4 {
-        text-align: left;
-    }
-}
 /********* MEDIA QUERIES  **********/
 
 /* Extra Small Devices, (Phones, 480px and up) */
@@ -148,11 +126,10 @@ h4 {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: $screen-sm-min) {
 
-
-.lead-large {
-	@include font-size(2.4);
-	@include line-height(2.8);	
-}
+	h2 {
+		@include font-size(3.3);
+		@include line-height(3.6);	
+	}
 
 }
 
@@ -160,18 +137,15 @@ h4 {
 @media (min-width: $screen-md-min) { 
 
     h1 {
-    	@include font-size(4.8);
-    	@include line-height(5.6);	
+    	@include font-size(3.8);
+    	@include line-height(4.6);	
     }
 
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: $screen-lg-min) {
-    h1 {
-    	@include font-size(5.8);
-    	@include line-height(6.6);	
-    }
+
 }
 
 /* Large devices (large desktops, 1400px and up) */

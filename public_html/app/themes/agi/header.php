@@ -26,40 +26,26 @@
 
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'agiwpproject' ); ?></a>
 
-	<header id="masthead" class="site-header" itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
 
-    </header><!-- #masthead -->
     
 	
 <div class="c-site-header">
 
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				
 				<!-- Logo -->
 				<a class="c-site-header__logo" href="<?php bloginfo('url'); ?>">
 					<img src="<?php bloginfo('template_url'); ?>/dist/images/agi-logo.png" alt="AGI logo" />
 				</a>
 				
-				<div class="c-cta-header hidden-xs">
-					<div class="c-cta-header__cta c-cta-header--call"><span>Call our team<span><a href="tel:08006128196">0800 612 8196</a></span></span></div>
-					<div class="c-cta-header__cta c-cta-header--call-form js-form-drawer"><span>Request a callback<span>Start your claim</span></span></div>
-				</div>
+				
+				<div class="c-site-header__telephone"><a href="tel:01617613638">0161 761 3638</a></div>
+				<div class="c-site-header__twitter"><a href="https://twitter.com/agisolicitors" title="AGI Solicitors Twitter">Twitter</a></div>
+				
 				
 				<div class="c-burger-menu">
 					<div class="c-burger-menu__box">
 						<div class="c-burger-menu__inner"></div>
 					</div>
 				</div>				
-				
-			</div>
-		</div>
-	</div>
-	
-
-
-	
 
 </div>
 

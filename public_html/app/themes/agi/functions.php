@@ -46,6 +46,7 @@ function agiwpproject_setup() {
 
     add_theme_support('post-thumbnails');
     add_image_size('small', 220, 152, true); // Small Thumbnail
+    add_image_size('service-thumb', 171, 205, true); // Small Thumbnail
     
 
 

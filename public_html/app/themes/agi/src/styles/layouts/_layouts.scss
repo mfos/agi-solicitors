@@ -1,0 +1,64 @@
+.l-wrapper {
+
+	&::after {
+		clear: both;
+	}
+	&::after,
+	&::before {
+		content: " ";
+		display: table;
+	}	
+
+	
+	&__container {
+		
+	}
+	&--internal-page {
+		padding-top: 40px;
+		padding-bottom: 20px;
+	}
+	
+	 @media (min-width: $screen-sm-min) {
+		 
+		 
+		 &__container {
+			margin-left: auto;
+			margin-right: auto;
+			width:750px;
+
+			&::after {
+				clear: both;
+			}
+			&::after,
+			&::before {
+				content: " ";
+				display: table;
+			}			 
+			 
+		 }
+		 &--internal-page {
+			 padding-top: 90px;
+		 }
+		 
+	}
+	@media screen and (min-width: $screen-md-min) {
+
+		&__container {
+			width:970px;
+		}		
+		 &--internal-page {
+			 padding-top: 114px;
+		 }		
+	}
+	
+	@media (min-width: $screen-lg-min) {
+		
+		&__container {
+			width:1170px;
+		}
+  	
+  	
+
+  	
+  	}
+}

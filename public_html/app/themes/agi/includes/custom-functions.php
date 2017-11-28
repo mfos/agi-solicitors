@@ -18,18 +18,12 @@ return $classes;
 add_filter( 'body_class', 'add_slug_body_class' );
 
 
-
-//Form down to bottom 
-if (!is_page('thank-you')) {
-        add_filter( 'gform_confirmation_anchor', '__return_true' );
- }
-
-
-
-add_filter( 'gform_validation_message', 'change_message', 10, 2 );
-function change_message( $message, $form ) {
-    return "<div class='validation_error'>There is an error with your submission. Please complete the forms highlighted below.</div>";
+// Move Yoast to bottom
+function yoasttobottom() {
+	return 'low';
 }
+add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
+
 
 // Custom menu walker class
 class Agi_Walker extends Walker_Nav_Menu {

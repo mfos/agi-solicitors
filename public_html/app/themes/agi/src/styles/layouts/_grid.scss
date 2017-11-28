@@ -1,0 +1,37 @@
+.l-grid-row,
+.l-grid-col {
+
+	&::after {
+		clear: both;
+	}
+	&::after,
+	&::before {
+		content: " ";
+		display: table;
+	}	
+	
+	
+}
+
+
+.l-grid-col {
+	
+	width:100%;
+	
+	/* Small devices (tablets, 768px and up) */
+	@media (min-width: $screen-sm-min) {
+	
+		
+		float:left;
+		
+		
+		
+		&--half {
+			width:50%;
+			
+		}
+		
+	
+	}	
+	
+}
